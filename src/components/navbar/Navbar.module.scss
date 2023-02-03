@@ -8,6 +8,8 @@
     color: white;
     justify-content: space-between;
     font-family: "Yantramanav", sans-serif;
+    
+    
     .logo {
         border-radius: 50%;
     }
@@ -23,6 +25,13 @@
         .navItem {
             margin: 0 20px;
             padding: 15px;
+            list-style: none;
+            &:hover{
+                ul{
+                    opacity: 1;
+                    display: block;
+                }
+            }
 
             ul {
                 color: #ffffff;
@@ -37,6 +46,7 @@
                 padding: 20px;
                 background-color: rgb(0, 0, 0);
                 opacity: 0;
+                display: none;
                 width: auto;
                 border: 1px solid white;
                 li {
@@ -70,11 +80,4 @@
         }
     }
 
-    ul {
-        li:nth-child(3):hover {
-            ul {
-                opacity: 1;
-            }
-        }
-    }
 }

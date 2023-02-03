@@ -5,3 +5,7 @@
 font-family: 'Open Sans', sans-serif; */
 font-family: 'Yantramanav', sans-serif;
 }
+a{
+  color: inherit;
+  text-decoration: none;
+}

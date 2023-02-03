@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <nav className={styles.navbar}>
-            <Link href="/home">
+            <Link href="/">
                 <Image
                     src={Logo}
                     className={styles.logo}
@@ -25,23 +25,23 @@ function Navbar() {
                 />{" "}
             </Link>
             <ul className={styles.navItems}>
-                <li className={styles.navItem}> Home</li>
-                <li className={styles.navItem}> About</li>
+                <li className={styles.navItem}> <Link href="/">Home</Link></li>
+                <li className={styles.navItem}> <Link href="/">About</Link></li>
                 <li className={styles.navItem}>
                     {" "}
                     Prequalifier{" "}
                     <RiArrowDropDownLine className={styles.dropdownicon} />
                     <ul>
-                        <li>Regisration</li>
-                        <li>Rules And Regulations</li>
-                        <li>Terms And Conditions</li>
-                        <li>Privacy Policy</li>
+                        <li><Link href="/">Regisration</Link></li>
+                        <li><Link href="/">Rules And Regulations</Link></li>
+                        <li><Link href="/">Terms And Conditions</Link></li>
+                        <li><Link href="/">Privacy Policy</Link></li>
                     </ul>
                 </li>
-                <li className={styles.navItem}> Start Category</li>
-                <li className={styles.navItem}> Book your ticket</li>
-                <li className={styles.navItem}>Media</li>
-                <li className={styles.navItem}>Contact</li>
+                <li className={styles.navItem}><Link href="/"> Start Category</Link></li>
+                <li className={styles.navItem}> <Link href="/">Book your ticket</Link></li>
+                <li className={styles.navItem}><Link href="/">Media</Link></li>
+                <li className={styles.navItem}><Link href="/">Contact</Link></li>
             </ul>
         </nav>
     );
