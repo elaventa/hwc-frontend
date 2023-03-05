@@ -1,0 +1,29 @@
+.heroContainer {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    .contentWrapper{
+        width: 40%;
+        color: #fff;
+        .title {
+            font-size: 3rem;
+            font-size: 800;
+            margin-bottom: 30px;
+        }
+        .content {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+        }
+    }
+
+    .image{
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        filter: brightness(40%);
+        z-index: -1;
+        object-fit: cover;
+    }
+}

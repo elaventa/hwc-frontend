@@ -1,0 +1,24 @@
+.headerContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 30vh;
+    
+    .image{
+        height: 30vh;
+        position: absolute;
+        top: 0;
+        filter: brightness(40%);
+        z-index: -1;
+        object-fit: cover;
+    }
+
+    .title{
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: .5rem;
+    }
+}

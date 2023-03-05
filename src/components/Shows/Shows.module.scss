@@ -1,0 +1,34 @@
+$card-width: 400px;
+.showsContainer{
+    background-color: #171E27;
+    width: 100%;
+    margin-top: $card-width;
+
+    .shows{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        .show{
+            margin-top: -$card-width/2;
+            width: $card-width;
+            .image{
+                height: $card-width;
+                object-fit: contain;
+            }
+
+            .contentWrapper{
+                color: #fff;
+                .title{
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+
+                }
+                .content{
+                    font-size: 1.3rem;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

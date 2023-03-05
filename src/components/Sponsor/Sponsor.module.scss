@@ -1,0 +1,19 @@
+.sponsorContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    background-color: #fff;
+    .left{
+        width: 80%;
+        .title{
+            font-size: 3rem;
+            font-size: 800;
+            margin-bottom: 30px;
+        }
+        .content{
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+        }
+    }
+}
