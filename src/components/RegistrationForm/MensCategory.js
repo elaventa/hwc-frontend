@@ -56,7 +56,7 @@ const MensCategory = () => {
     ];
     return (
         <>
-            <Row gutter={70}>
+            <Row >
                 <Col xs={24} lg={12}>
                     <Row>
                         <Typography.Title level={5}>
@@ -68,9 +68,9 @@ const MensCategory = () => {
                         name={["categories", "bodyBuilding"]}
                     >
                         <Checkbox.Group>
-                            <Row gutter={20}>
+                            <Row>
                                 {bodyBuildingCategories.map((category) => (
-                                    <Col key={category.value} lg={8}>
+                                    <Col key={category.value} lg={6}>
                                         <Checkbox value={category.value}>
                                             {category.label}
                                         </Checkbox>
@@ -98,7 +98,7 @@ const MensCategory = () => {
                 </Col>
             </Row>
 
-            <Row gutter={70}>
+            <Row>
                 <Col xs={24} lg={12}>
                     <Row>
                         <Typography.Title level={5}>
