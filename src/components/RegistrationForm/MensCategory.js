@@ -110,7 +110,7 @@ const MensCategory = () => {
                         name={["categories", "classicPhysique"]}
                     >
                         <Checkbox.Group>
-                            <Row gutter={20}>
+                            <Row>
                                 {classicPhysiqueCategories.map((category) => (
                                     <Col style={{padding: "10px 0"}} key={category.value} xs={12} lg={12}>
                                         <Checkbox value={category.value}>
@@ -122,7 +122,7 @@ const MensCategory = () => {
                         </Checkbox.Group>
                     </Form.Item>
                 </Col>
-                <Col style={{padding: "10px 0"}} xs={24} lg={8}>
+                <Col style={{padding: "10px 0"}}>
                     <Row>
                         <Typography.Title level={5}>
                             Mens Physique Under 23 Category (open)
@@ -133,7 +133,7 @@ const MensCategory = () => {
                         name={["categories", "mensPhysique"]}
                     >
                         <Checkbox.Group>
-                            <Row gutter={20}>
+                            <Row>
                                 {classicPhysiqueCategories.map((category) => (
                                     <Col style={{padding: "10px 0"}} key={category.value} xs={12} lg={12}>
                                         <Checkbox value={category.value}>
