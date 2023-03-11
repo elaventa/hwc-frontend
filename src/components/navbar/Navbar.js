@@ -16,6 +16,8 @@ function Navbar() {
         <nav className={styles.navbar}>
             <Link href="/">
                 <Image
+                    placeholder="blur"
+                    loading="lazy"
                     src={Logo}
                     className={styles.logo}
                     alt=""
@@ -23,7 +25,11 @@ function Navbar() {
                     height={130}
                 />
             </Link>
-            <ul className={[styles.navItems, clicked ? styles.true : ""].join(" ")}>
+            <ul
+                className={[styles.navItems, clicked ? styles.true : ""].join(
+                    " "
+                )}
+            >
                 <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/">Home</Link>
                 </li>
@@ -60,7 +66,12 @@ function Navbar() {
             </ul>
 
             <div className={styles.mobileNav}>
-                <div onClick={handleClick} className={`${styles.hamburger} ${clicked ? styles.true : ""}`}>
+                <div
+                    onClick={handleClick}
+                    className={`${styles.hamburger} ${
+                        clicked ? styles.true : ""
+                    }`}
+                >
                     <span></span>
                     <span></span>
                     <span></span>

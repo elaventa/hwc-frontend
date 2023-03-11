@@ -8,7 +8,13 @@ const Shows = () => {
             <section className={styles.shows}>
                 {[1, 2, 3].map((i) => (
                     <div key={i} className={styles.show}>
-                        <Image className={styles.image} src={img} alt="" />
+                        <Image
+                            placeholder="blur"
+                            loading="lazy"
+                            className={styles.image}
+                            src={img}
+                            alt=""
+                        />
                         <div className={styles.contentWrapper}>
                             <h1 className={styles.title}>
                                 Hard work classic pro qualifiers

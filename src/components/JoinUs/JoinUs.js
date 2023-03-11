@@ -6,7 +6,13 @@ const JoinUs = () => {
     return (
         <div className={styles.joinUsWrapper}>
             <div className={styles.background}>
-                <Image className={styles.image} src={background} alt="syed shehbaz" />
+                <Image
+                    placeholder="blur"
+                    loading="lazy"
+                    className={styles.image}
+                    src={background}
+                    alt="syed shehbaz"
+                />
             </div>
             <section className={styles.joinUsContainer}>
                 <div className={styles.left}>
@@ -16,10 +22,9 @@ const JoinUs = () => {
 
                 <div className={styles.right}>
                     <iframe
-                       className={styles.frame}
+                        className={styles.frame}
                         src="https://www.youtube.com/embed/IpvMgvwVo8U"
                         title="YouTube video player"
-                       
                     ></iframe>
                 </div>
             </section>

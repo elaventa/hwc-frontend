@@ -7,6 +7,8 @@ const GetInTouch = () => {
         <div className={styles.GetInTouchWrapper}>
             <div className={styles.background}>
                 <Image
+                    placeholder="blur"
+                    loading="lazy"
                     className={styles.image}
                     src={background}
                     alt="syed shehbaz"
