@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./Hero.module.scss";
 import Button from "../Button/Button";
 import img from "../../assets/arnauld.png";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -14,7 +15,16 @@ const Hero = () => {
                     temporibus amet adipisci libero aliquid quasi qui incidunt
                     asperiores cumque omnis quae facilis natus eius ad id.
                 </p>
-                <Button content="Learn more"></Button>
+
+                <div className={styles.actionBtns}>
+                  <Link href={"/registration"}>
+                      <Button content="Register Now"></Button>
+                  </Link>
+
+                  <Link href={"/"}>
+                      <Button style={{backgroundColor: 'transparent', border: '1px solid #fff'}} content="Book Tickets"></Button>
+                  </Link>
+                </div>
             </div>
             <Image
                 placeholder="blur"
