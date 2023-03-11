@@ -24,8 +24,11 @@ function Navbar() {
                 />
             </Link>
             <ul className={[styles.navItems, clicked ? styles.true : ""].join(" ")}>
-                <li className={styles.navItem}>
+                <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/">Home</Link>
+                </li>
+                <li onClick={handleClick} className={styles.navItem}>
+                    <Link href="/registration">Register</Link>
                 </li>
                 <li className={styles.navItem}>
                     Prequalifier
