@@ -4,8 +4,16 @@
     gap: 100px;
     align-items: center;
     background-color: #fff;
+    @media(max-width: 1350px){
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
     .left{
         width: 80%;
+        @media(max-width: 1350px){
+            width: 100%;
+        }
         .title{
             font-size: 3rem;
             font-size: 800;
@@ -14,6 +22,12 @@
         .content{
             font-size: 1.4rem;
             margin-bottom: 30px;
+        }
+    }
+
+    .right{
+        .image{
+            object-fit: cover;
         }
     }
 }

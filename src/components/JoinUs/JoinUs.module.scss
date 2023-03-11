@@ -9,7 +9,9 @@
         z-index: -1;
         width: 100%;
         filter: brightness(50%);
-      
+        .image{
+            object-fit: cover;
+        }
     }
 
     .joinUsContainer{
@@ -18,6 +20,9 @@
         gap: 100px;
         align-items: center;
         width: 100%;
+        @media(max-width: 1350px){
+            grid-template-columns: 1fr;
+        }
         .left{
             width: 80%;
             .title{
@@ -29,6 +34,12 @@
             .content{
                 font-size: 1.4rem;
                 margin-bottom: 30px;
+            }
+        }
+
+        .right{
+            .frame{
+                width: 100%;
             }
         }
     }
