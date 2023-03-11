@@ -18,7 +18,6 @@ const Hero = () => {
             </div>
             <Image
                 placeholder="blur"
-                loading="lazy"
                 className={styles.image}
                 src={img}
                 priority
