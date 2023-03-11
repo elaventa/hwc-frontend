@@ -25,7 +25,6 @@ function Navbar() {
             </Link>
             <ul className={[styles.navItems, clicked ? styles.true : ""].join(" ")}>
                 <li className={styles.navItem}>
-                    {" "}
                     <Link href="/">Home</Link>
                 </li>
                 <li className={styles.navItem}>
@@ -50,7 +49,6 @@ function Navbar() {
                     <Link href="/"> Start Category</Link>
                 </li>
                 <li className={styles.navItem}>
-                    {" "}
                     <Link href="/">Book your tickets</Link>
                 </li>
                 <li className={styles.navItem}>

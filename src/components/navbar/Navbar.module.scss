@@ -7,7 +7,9 @@
     color: white;
     justify-content: space-between;
     font-family: "Yantramanav", sans-serif;
-    
+    @media(max-width: 1000px){
+        padding: 0 20px;
+    }
     
     .logo {
         border-radius: 50%;
