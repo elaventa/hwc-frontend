@@ -1,5 +1,4 @@
 import { Button, Col, Form, Row, Select, Upload } from "antd";
-import React from "react";
 import { UploadOutlined } from "@ant-design/icons";
 
 const Identity = () => {

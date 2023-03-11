@@ -1,4 +1,4 @@
-import { Checkbox, Col, Form, Radio, Row, Typography } from "antd";
+import { Checkbox, Col, Form, Row, Typography } from "antd";
 
 const MensCategory = () => {
     const bodyBuildingCategories = [

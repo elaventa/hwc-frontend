@@ -1,6 +1,4 @@
 import { Col, Form, Input, Row } from "antd";
-import TextArea from "antd/es/input/TextArea";
-import React from "react";
 
 const Address = () => {
     return (
@@ -16,7 +14,7 @@ const Address = () => {
                         },
                     ]}
                 >
-                    <TextArea />
+                    <Input.TextArea />
                 </Form.Item>
             </Col>
             <Col xs={12} lg={6}>

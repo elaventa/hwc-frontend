@@ -1,13 +1,13 @@
-"use client";
-import { Button, Checkbox, Divider, Form, Typography } from "antd";
 import { useEffect, useState } from "react";
-import Address from "./Address";
+import { Button, Checkbox, Divider, Form, Typography } from "antd";
 import BasicDetails from "./BasicDetails";
+import Address from "./Address";
+import Identity from "./Identity";
 import Category from "./Category";
 import FemaleCategory from "./FemaleCategory";
-import Identity from "./Identity";
 import MensCategory from "./MensCategory";
-import "./RegistrationForm.scss";
+
+
 const RegistrationForm = () => {
     const [form] = Form.useForm();
     const category = Form.useWatch("category", form);
