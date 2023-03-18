@@ -36,7 +36,7 @@ function Navbar() {
                 <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/registration">Register</Link>
                 </li>
-                <li className={styles.navItem}>
+                {/* <li className={styles.navItem}>
                     Prequalifier
                     <RiArrowDropDownLine className={styles.dropdownicon} />
                     <ul className={styles.navItems}>
@@ -56,7 +56,7 @@ function Navbar() {
                 </li>
                 <li className={styles.navItem}>
                     <Link href="/"> Start Category</Link>
-                </li>
+                </li> */}
                 <li className={styles.navItem}>
                     <Link href="/">Book your tickets</Link>
                 </li>
