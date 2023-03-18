@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <section className={styles.footerContent}>
-                <Image className={styles.logo} src={logo} alt="hwc logo" />
+                <Image loading="lazy" placeholder="blur" className={styles.logo} src={logo} alt="hwc logo" />
                 <div className={styles.col}>
                     <h2 className={styles.footerTitle}>Competitions</h2>
                     <ul>

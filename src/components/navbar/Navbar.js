@@ -57,10 +57,10 @@ function Navbar() {
                 <li className={styles.navItem}>
                     <Link href="/"> Start Category</Link>
                 </li> */}
-                <li className={styles.navItem}>
+                <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/">Book your tickets</Link>
                 </li>
-                <li className={styles.navItem}>
+                <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/media">Media</Link>
                 </li>
             </ul>
