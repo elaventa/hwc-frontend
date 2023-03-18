@@ -1,6 +1,8 @@
 import Image from "next/image";
 import styles from "./Footer.module.scss";
 import logo from "../../assets/logo.png";
+import Link from "next/link";
+import Social from "../Social/Social";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
@@ -27,18 +29,31 @@ const Footer = () => {
                     <h2 className={styles.footerTitle}>Important Links</h2>
 
                     <ul>
-                        <li> Book your Tickets</li>
-                        <li>Media</li>
-                        <li>About Us</li>
-                        <li>Contact</li>
+                        <Link href="#">
+                            {" "}
+                            <li>Book your Tickets</li>
+                        </Link>
+                        <Link href="/media">
+                            <li>Media</li>
+                        </Link>
+                        <Link href="/about">
+                            <li>About Us</li>
+                        </Link>
+                        <Link href="/contact">
+                            <li>Contact</li>
+                        </Link>
                     </ul>
 
                     <br />
                     <h2 className={styles.footerTitle}>Other</h2>
 
                     <ul>
-                        <li>Privacy Policy</li>
-                        <li>Terms and Conditions</li>
+                        <Link href="/privacy-policy">
+                            <li>Privacy Policy</li>
+                        </Link>
+                        <Link href="terms-and-conditions">
+                            <li>Terms and Conditions</li>
+                        </Link>
                     </ul>
                 </div>
 
@@ -52,8 +67,17 @@ const Footer = () => {
 
                     <br />
 
-                    <p className={styles.bold}>+91 85913 36124</p>
-                    <p className={styles.bold}>hardworkclassic@gmail.com</p>
+                    <p className={styles.bold}>
+                        <a href="tel:+">+91 85913 36124</a>
+                    </p>
+                    <p className={styles.bold}>
+                        {" "}
+                        <a href="mailto:">hardworkclassic@gmail.com</a>{" "}
+                    </p>
+
+                    <br />
+                    <br />
+                    <Social />
                 </div>
             </section>
 

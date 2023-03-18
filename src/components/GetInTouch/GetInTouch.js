@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./GetInTouch.module.scss";
 import background from "../../assets/GetInTouch.png"
+import Social from "../Social/Social";
 
 const GetInTouch = () => {
     return (
@@ -22,17 +23,17 @@ const GetInTouch = () => {
 
                     <div className={styles.row}>
                         <h3 className={styles.subTitle}>Email</h3>
-                        <p className={styles.subContent}>hardworkclassic@gmail.com</p>
+                        <p className={styles.subContent}> <a href="mailto:hardworkclassic@gmail.com"> hardworkclassic@gmail.com</a></p>
                     </div>
 
                     <div className={styles.row}>
                         <h3 className={styles.subTitle}>Phone</h3>
-                        <p className={styles.subContent}>+91 9747 406 685</p>
+                        <p className={styles.subContent}><a href="tel:+"> +91 9747 406 685</a></p>
                     </div>
 
                     <div className={styles.row}>
                         <h3 className={styles.subTitle}>Social</h3>
-                        <p className={styles.subContent}></p>
+                        <Social />
                     </div>
 
                 </div>

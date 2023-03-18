@@ -1,0 +1,11 @@
+.social{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin: 10px 0;
+
+    .icon{
+        font-size: 30px;
+        color: #E90041;
+    }
+}

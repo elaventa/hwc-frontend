@@ -26,6 +26,28 @@
             ul{
                 list-style: none;
                 padding: 0;
+                li{
+                    cursor: pointer;
+                    margin-bottom: 10px;
+                    width: fit-content;
+                }
+                li::after {
+                    display: block;
+                    content: "";
+                    border-bottom: solid 1px #ee4120;
+                    height: 0;
+                    left: 0;
+                    position: relative;
+                    transform: scaleX(0);
+                    transition: transform 450ms ease-in-out;
+                }
+                li:hover:after {
+                    transform: scaleX(1);
+                }
+                li::after {
+                    // transform-origin:100% 50%;
+                    transform-origin: 0% 100%;
+                }
             }
         }
     }
@@ -36,5 +58,9 @@
         text-align: center;
         padding: 15px 0;
         font-size: 0.9rem;
+    }
+
+    .bold{
+        font-weight: bold;
     }
 }

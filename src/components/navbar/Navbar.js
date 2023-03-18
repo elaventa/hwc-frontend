@@ -61,7 +61,7 @@ function Navbar() {
                     <Link href="/">Book your tickets</Link>
                 </li>
                 <li className={styles.navItem}>
-                    <Link href="/">Media</Link>
+                    <Link href="/media">Media</Link>
                 </li>
             </ul>
 
