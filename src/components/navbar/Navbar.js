@@ -36,27 +36,27 @@ function Navbar() {
                 <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/registration">Register</Link>
                 </li>
-                {/* <li className={styles.navItem}>
+                <li className={styles.navItem}>
                     Prequalifier
                     <RiArrowDropDownLine className={styles.dropdownicon} />
                     <ul className={styles.navItems}>
                         <li className={styles.navItem}>
-                            <Link href="/">Regisration</Link>
+                            <Link href="/registration">Regisration</Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link href="/">Rules And Regulations</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="/">Terms And Conditions</Link>
+                            <Link href="/terms-and-conditions">Terms And Conditions</Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="/">Privacy Policy</Link>
+                            <Link href="/privacy-policy">Privacy Policy</Link>
                         </li>
                     </ul>
                 </li>
                 <li className={styles.navItem}>
                     <Link href="/"> Start Category</Link>
-                </li> */}
+                </li>
                 <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/">Book your tickets</Link>
                 </li>
