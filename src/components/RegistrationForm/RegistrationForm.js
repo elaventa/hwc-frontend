@@ -7,6 +7,7 @@ import Category from "./Category";
 import FemaleCategory from "./FemaleCategory";
 import MensCategory from "./MensCategory";
 import { useRegister } from "@/reactQuery/registration";
+import { isNum } from "react-toastify/dist/utils";
 
 
 const RegistrationForm = () => {
@@ -38,8 +39,9 @@ const RegistrationForm = () => {
                 (value) => (total += value?.length)
             );
         }
+        setamount(total * 2000)
 
-        setamount(total * 2000);
+        
     }, [selectedCategories]);
 
 
@@ -84,7 +86,7 @@ const RegistrationForm = () => {
 
                 <div className="totalAmount">
                     <Typography.Title level={4}>
-                        Total Amount : {amount} Rs
+                        Total Amount : {isNaN(amount) ? 0 : amount } Rs
                     </Typography.Title>
                 </div>
 
