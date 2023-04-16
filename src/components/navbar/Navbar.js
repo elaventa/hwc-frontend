@@ -40,16 +40,16 @@ function Navbar() {
                     Prequalifier
                     <RiArrowDropDownLine className={styles.dropdownicon} />
                     <ul className={styles.navItems}>
-                        <li className={styles.navItem}>
+                        <li onClick={handleClick} className={styles.navItem}>
                             <Link href="/registration">Regisration</Link>
                         </li>
-                        <li className={styles.navItem}>
-                            <Link href="/">Rules And Regulations</Link>
+                        <li onClick={handleClick} className={styles.navItem}>
+                            <Link href="/rules-and-regulations">Rules And Regulations</Link>
                         </li>
-                        <li className={styles.navItem}>
+                        <li onClick={handleClick} className={styles.navItem}>
                             <Link href="/terms-and-conditions">Terms And Conditions</Link>
                         </li>
-                        <li className={styles.navItem}>
+                        <li onClick={handleClick} className={styles.navItem}>
                             <Link href="/privacy-policy">Privacy Policy</Link>
                         </li>
                     </ul>
