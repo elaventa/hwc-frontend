@@ -1,6 +1,6 @@
 $card-width: 400px;
 .showsContainer {
-    background-color: #171e27;
+    background-color: #fff;
     width: 100%;
     margin-top: $card-width;
 
@@ -25,28 +25,21 @@ $card-width: 400px;
             .image {
                 height: $card-width;
                 object-fit: contain;
+                border-radius: 50% 50% 0 0;
             }
 
             .contentWrapper {
-                color: #fff;
+                color: #000;
                 @media (max-width: 1350px) {
-                    background-color: #171e27;
-                    position: relative;
-                    width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    padding: 10px;
                     text-align: center;
-                    margin-top: -60px;
-                    margin-bottom: 60px;
                 }
                 .title {
-                    font-size: 2rem;
-                    margin-bottom: 20px;
+                    font-size: 1.2rem;
+                    margin-bottom: 15px;
                     text-transform: uppercase;
                 }
                 .content {
-                    font-size: 1.3rem;
+                    font-size: 1rem;
                     margin-bottom: 20px;
                     @media (max-width: 1350px) {
                         display: none;

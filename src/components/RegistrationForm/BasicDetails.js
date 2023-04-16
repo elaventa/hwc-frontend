@@ -7,7 +7,7 @@ const BasicDetails = () => {
             <Col xs={6} lg={4}>
                 <Form.Item
                     label="Title"
-                    name="title"
+                    name={["personalDetails", "title"]}
                     rules={[
                         {
                             required: true,
@@ -25,7 +25,7 @@ const BasicDetails = () => {
             <Col xs={9} lg={6}>
                 <Form.Item
                     label="First Name"
-                    name="firstName"
+                    name={["personalDetails", "firstName"]}
                     rules={[
                         {
                             required: true,
@@ -40,7 +40,7 @@ const BasicDetails = () => {
             <Col xs={9} lg={6}>
                 <Form.Item
                     label="Last Name"
-                    name="lastName"
+                    name={["personalDetails", "lastName"]}
                     rules={[
                         {
                             required: true,
@@ -54,7 +54,7 @@ const BasicDetails = () => {
             <Col xs={12} sm={6} lg={4}>
                 <Form.Item
                     label="Gender"
-                    name="gender"
+                    name={["personalDetails", "gender"]}
                     rules={[
                         {
                             required: true,
@@ -71,7 +71,7 @@ const BasicDetails = () => {
             <Col xs={12} lg={4}>
                 <Form.Item
                     label="Age"
-                    name="age"
+                    name={["personalDetails", "age"]}
                     rules={[
                         {
                             required: true,
@@ -86,7 +86,7 @@ const BasicDetails = () => {
             <Col xs={24} sm={12} lg={6}>
                 <Form.Item
                     label="Email"
-                    name="email"
+                    name={["personalDetails", "email"]}
                     rules={[
                         {
                             type: "email",
@@ -101,7 +101,7 @@ const BasicDetails = () => {
             <Col xs={24} sm={12} lg={6}>
                 <Form.Item
                     label="Mobile Number"
-                    name="mobileNo"
+                    name={["personalDetails", "mobileNo"]}
                     rules={[
                         {
                             required: true,

@@ -6,7 +6,7 @@ const Address = () => {
             <Col xs={24} lg={12}>
                 <Form.Item
                     label="Street Address"
-                    name="streetAddress"
+                    name={["addressDetails","streetAddress"]}
                     rules={[
                         {
                             required: true,
@@ -20,7 +20,7 @@ const Address = () => {
             <Col xs={12} lg={6}>
                 <Form.Item
                     label="City"
-                    name="city"
+                    name={["addressDetails","city"]}
                     rules={[
                         {
                             required: true,
@@ -34,7 +34,7 @@ const Address = () => {
             <Col xs={12} lg={6}>
                 <Form.Item
                     label="State"
-                    name="state"
+                    name={["addressDetails","state"]}
                     rules={[
                         {
                             required: true,
@@ -48,7 +48,7 @@ const Address = () => {
             <Col xs={12} lg={6}>
                 <Form.Item
                     label="Country"
-                    name="country"
+                    name={["addressDetails","country"]}
                     rules={[
                         {
                             required: true,
@@ -62,7 +62,7 @@ const Address = () => {
             <Col xs={12} lg={6}>
                 <Form.Item
                     label="Pin code"
-                    name="pincode"
+                    name={["addressDetails","pincode"]}
                     rules={[
                         {
                             required: true,

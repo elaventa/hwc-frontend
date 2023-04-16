@@ -1,20 +1,40 @@
+.joinUs{
+    background-color: #fff;
+    z-index: -2;
+    padding: 100px 0px;
+}
 .joinUsWrapper{
     position: relative;
-    width: 100%;
+    width: 80vw;
+    margin: 0px auto;
+    padding: 50px;
+    border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media(max-width: 1000px){
+        width: fit-content;
+        border-radius: 25px;
+    }
     .background{
         position: absolute;
-        z-index: -1;
+        top: 0px;
+        z-index: 1;
         width: 100%;
         filter: brightness(50%);
         .image{
+            border-bottom: 15px solid #E90041;
+            border-radius: 100px;
             object-fit: cover;
+            @media(max-width: 1000px){
+                border-radius: 25px;
+            }
         }
     }
-
+    
     .joinUsContainer{
+        z-index: 2;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 100px;
@@ -24,9 +44,8 @@
             grid-template-columns: 1fr;
         }
         .left{
-            width: 80%;
             .title{
-                font-size: 3rem;
+                font-size: 2rem;
                 font-size: 800;
                 margin-bottom: 30px;
                 color: #fff;
@@ -40,6 +59,8 @@
         .right{
             .frame{
                 width: 100%;
+                height: auto;
+                aspect-ratio: 16/8;
             }
         }
     }

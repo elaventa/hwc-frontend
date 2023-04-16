@@ -1,5 +1,6 @@
 import { Button, Col, Form, Row, Select, Upload } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
+import { config } from "@/config";
 
 const Identity = () => {
     return (
@@ -7,7 +8,7 @@ const Identity = () => {
             <Col xs={24} lg={6}>
                 <Form.Item
                     label="Govt. ID Type"
-                    name="idType"
+                    name={["proof", "idType"]}
                     rules={[
                         {
                             required: true,
@@ -33,7 +34,7 @@ const Identity = () => {
             <Col xs={24} md={12} lg={6}>
                 <Form.Item
                     label="Govt. ID"
-                    name="govtID"
+                    name={["proof", "govtID"]}
                     rules={[
                         {
                             required: true,
@@ -41,7 +42,7 @@ const Identity = () => {
                         },
                     ]}
                 >
-                    <Upload>
+                    <Upload action={`${config.SERVER_URL}/upload`}>
                         <Button icon={<UploadOutlined />}>
                             Click to Upload Govt. Id
                         </Button>
@@ -51,7 +52,7 @@ const Identity = () => {
             <Col xs={24} md={12} lg={6}>
                 <Form.Item
                     label="Your Photo"
-                    name="photo"
+                    name={["proof", "photo"]}
                     rules={[
                         {
                             required: true,
@@ -59,7 +60,7 @@ const Identity = () => {
                         },
                     ]}
                 >
-                    <Upload>
+                    <Upload action={`${config.SERVER_URL}/upload`}>
                         <Button icon={<UploadOutlined />}>
                             Click to Upload your photo
                         </Button>

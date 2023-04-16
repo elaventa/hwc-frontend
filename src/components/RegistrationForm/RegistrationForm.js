@@ -1,20 +1,31 @@
 import { useEffect, useState } from "react";
-import { Button, Checkbox, Divider, Form, Typography } from "antd";
+import { Button, Checkbox, Divider, Form, Spin, Typography } from "antd";
 import BasicDetails from "./BasicDetails";
 import Address from "./Address";
 import Identity from "./Identity";
 import Category from "./Category";
 import FemaleCategory from "./FemaleCategory";
 import MensCategory from "./MensCategory";
+import { useRegister } from "@/reactQuery/registration";
 
 
 const RegistrationForm = () => {
     const [form] = Form.useForm();
     const category = Form.useWatch("category", form);
     console.log(category);
+
+
+    const { mutate: register, isLoading } = useRegister()
+      
     const onFinish = (values) => {
-        console.log(values);
+        console.log(values)
+        const payload = JSON.parse(JSON.stringify(values))
+        payload.proof.govtID = values.proof.govtID.file.response
+        payload.proof.photo = values.proof.photo.file.response
+        register({payload})
+        form.resetFields();
     };
+
     const selectedCategories = Form.useWatch("categories", form);
     console.log(selectedCategories);
 
@@ -30,6 +41,15 @@ const RegistrationForm = () => {
 
         setamount(total * 2000);
     }, [selectedCategories]);
+
+
+    if(isLoading){
+        return(
+            <div style={{height: '60vh', display: "flex", alignItems: "center", justifyContent: "center"}}>
+                <Spin tip="Registering..."></Spin>
+            </div>
+        )
+    }
 
     return (
         <section className="registrationFormSection">

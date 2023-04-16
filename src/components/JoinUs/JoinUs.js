@@ -4,6 +4,9 @@ import styles from "./JoinUs.module.scss";
 import background from "../../assets/background1.png";
 const JoinUs = () => {
     return (
+        <div className={styles.joinUs}>
+
+       
         <div className={styles.joinUsWrapper}>
             <div className={styles.background}>
                 <Image
@@ -28,6 +31,7 @@ const JoinUs = () => {
                     ></iframe>
                 </div>
             </section>
+        </div>
         </div>
     );
 };

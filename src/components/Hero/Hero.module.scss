@@ -1,24 +1,50 @@
-.heroContainer {
+.outer{
     position: relative;
-    height: 50vh;
-    display: flex;
-    align-items: center;
+    .curve{
+        margin-top: -10px;
+        height: 60vh;
+        @media(max-width: 1600px){
+            display: none;
+        }
+    }
+    .phoneCurve{
+        display: none;
+        @media(max-width: 1600px){
+            width: 100vw;
+            display: block;
+        }
+        @media(max-width: 600px){
+            width: 100vw;
+            height: 80vh;
+            display: block;
+        }
+    }
+}
+.heroContainer {
+    .contentContainer{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     .contentWrapper {
         width: 40%;
+        padding: 100px;
         @media (max-width: 1350px) {
+            padding: 20px;
             width: 80%;
         }
         @media (max-width: 850px) {
-            width: 100%;
+            width: fit-content;
         }
         color: #fff;
         .title {
-            font-size: 3rem;
+            font-size: 2.3rem;
             font-size: 800;
             margin-bottom: 30px;
         }
         .content {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 30px;
         }
     }

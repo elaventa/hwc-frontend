@@ -1,9 +1,10 @@
 .sponsorContainer{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 100px;
     align-items: center;
-    background-color: #fff;
+    background-color: #171E27;
+    color: #fff;
     @media(max-width: 1350px){
         grid-template-columns: 1fr;
         text-align: center;
@@ -27,6 +28,8 @@
 
     .right{
         .image{
+            width: 250px;
+            height: auto;
             object-fit: cover;
         }
     }

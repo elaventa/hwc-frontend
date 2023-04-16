@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import Logo from "../../assets/hwc-logo.jpeg";
+import Logo from "../../assets/logo.png";
 import Image from "next/image";
 import styles from "./Navbar.module.scss";
 import { useState } from "react";
