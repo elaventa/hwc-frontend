@@ -7,7 +7,6 @@ import Category from "./Category";
 import FemaleCategory from "./FemaleCategory";
 import MensCategory from "./MensCategory";
 import { useRegister } from "@/reactQuery/registration";
-import { isNum } from "react-toastify/dist/utils";
 
 
 const RegistrationForm = () => {
