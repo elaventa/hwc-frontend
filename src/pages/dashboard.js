@@ -1,10 +1,20 @@
+import ShowAddressModal from "@/components/Dashboard/ShowAddressModal";
 import { useGetRegistrations } from "@/reactQuery/registration";
 import { Button, Table, Tag } from "antd";
+import { useState } from "react";
 
 const DashboardPage = () => {
     const { data: registrations, isLoading: isRegistrationsLoading } =
         useGetRegistrations();
     console.log(registrations?.data);
+    const [showAddressModal, setshowAddressModal] = useState(false);
+    const [address, setaddress] = useState();
+
+    const showAddress = (addr) => {
+        setshowAddressModal(true);
+        setaddress(addr);
+    };
+
     const columns = [
         {
             title: "Name",
@@ -56,6 +66,16 @@ const DashboardPage = () => {
                 ),
         },
         {
+            title: "Address",
+            key: "address",
+            dataIndex: "addressDetails",
+            render: (address) => (
+                <Button onClick={() => showAddress(address)}>
+                    View Address
+                </Button>
+            ),
+        },
+        {
             title: "Action",
             key: "action",
             render: (_, record) => <Button>View</Button>,
@@ -63,6 +83,13 @@ const DashboardPage = () => {
     ];
     return (
         <>
+            {showAddressModal ? (
+                <ShowAddressModal
+                    isModalOpen={showAddressModal}
+                    setisModalOpen={setshowAddressModal}
+                    address={address}
+                />
+            ) : null}
             <Table
                 loading={isRegistrationsLoading}
                 columns={columns}
@@ -80,5 +107,5 @@ const DashboardPage = () => {
 export default DashboardPage;
 
 DashboardPage.getLayout = function getLayout(page) {
-    return  page ;
+    return page;
 };

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Checkbox, Divider, Form, Spin, Typography } from "antd";
+import { Button, Checkbox, Divider, Form, Modal, Spin, Typography } from "antd";
 import BasicDetails from "./BasicDetails";
 import Address from "./Address";
 import Identity from "./Identity";
@@ -8,22 +8,21 @@ import FemaleCategory from "./FemaleCategory";
 import MensCategory from "./MensCategory";
 import { useRegister } from "@/reactQuery/registration";
 import Link from "next/link";
-
+import ShowAddressModal from "../Dashboard/ShowAddressModal";
 
 const RegistrationForm = () => {
     const [form] = Form.useForm();
     const category = Form.useWatch("category", form);
     console.log(category);
 
+    const { mutate: register, isLoading } = useRegister();
 
-    const { mutate: register, isLoading } = useRegister()
-      
     const onFinish = (values) => {
-        console.log(values)
-        const payload = JSON.parse(JSON.stringify(values))
-        payload.proof.govtID = values.proof.govtID.file.response
-        payload.proof.photo = values.proof.photo.file.response
-        register({payload})
+        console.log(values);
+        const payload = JSON.parse(JSON.stringify(values));
+        payload.proof.govtID = values.proof.govtID.file.response;
+        payload.proof.photo = values.proof.photo.file.response;
+        register({ payload });
         form.resetFields();
     };
 
@@ -39,18 +38,25 @@ const RegistrationForm = () => {
                 (value) => (total += value?.length)
             );
         }
-        setamount(total * 5500)
-
-        
+        setamount(total * 5500);
     }, [selectedCategories]);
 
 
-    if(isLoading){
-        return(
-            <div style={{height: '60vh', display: "flex", alignItems: "center", justifyContent: "center"}}>
+    
+
+    if (isLoading) {
+        return (
+            <div
+                style={{
+                    height: "60vh",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                }}
+            >
                 <Spin tip="Registering..."></Spin>
             </div>
-        )
+        );
     }
 
     return (
@@ -80,13 +86,14 @@ const RegistrationForm = () => {
 
                 <Divider />
                 <Typography.Text>
-                    *Participants must pay ₹5500/- for each show. This amount is non refundable
+                    *Participants must pay ₹5500/- for each show. This amount is
+                    non refundable
                 </Typography.Text>
                 <Divider />
 
                 <div className="totalAmount">
                     <Typography.Title level={4}>
-                        Total Amount : {isNaN(amount) ? 0 : amount } Rs
+                        Total Amount : {isNaN(amount) ? 0 : amount} Rs
                     </Typography.Title>
                 </div>
 
@@ -103,7 +110,10 @@ const RegistrationForm = () => {
                 >
                     <Checkbox>
                         By clicking register you agree to our Terms &
-                        Conditions. <Link href="/rules-and-regulations" target="_blank">(Read Rules and Regulations)</Link>
+                        Conditions.{" "}
+                        <Link href="/rules-and-regulations" target="_blank">
+                            (Read Rules and Regulations)
+                        </Link>
                     </Checkbox>
                 </Form.Item>
                 <Button type="primary" htmlType="submit">
