@@ -5,10 +5,22 @@ import NextNProgress from "nextjs-progressbar";
 import { DefaultSeo } from "next-seo";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ToastContainer } from "react-toastify";
+import DashboardLayout from "@/components/DashboardLayout";
 
 const queryClient = new QueryClient();
 
 function MyApp({ Component, pageProps }) {
+    const getLayout = Component.getLayout;
+
+    if (getLayout) {
+        return getLayout(
+            <QueryClientProvider client={queryClient}>
+                <DashboardLayout>
+                    <Component {...pageProps} />
+                </DashboardLayout>
+            </QueryClientProvider>
+        );
+    }
     return (
         <QueryClientProvider client={queryClient}>
             <Layout>
