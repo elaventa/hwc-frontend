@@ -54,9 +54,9 @@ function Navbar() {
                         </li>
                     </ul>
                 </li>
-                <li className={styles.navItem}>
+                {/* <li className={styles.navItem}>
                     <Link href="/"> Start Category</Link>
-                </li>
+                </li> */}
                 <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/">Book your tickets</Link>
                 </li>

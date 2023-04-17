@@ -11,18 +11,17 @@ const Footer = () => {
                 <div className={styles.col}>
                     <h2 className={styles.footerTitle}>Competitions</h2>
                     <ul>
-                        <li>Pro Qualifiers</li>
-                        <li>Pro Show India</li>
-                        <li>Amateur Olympia India</li>
+                        <li>Mr. Bangalore</li>
+                        <li>Mr. Hyderabad</li>
                     </ul>
 
                     <br />
                     <br />
-                    <h2 className={styles.footerTitle}>STAR CATEGORY</h2>
+                    {/* <h2 className={styles.footerTitle}>STAR CATEGORY</h2>
                     <ul>
                         <li>Registration</li>
                         <li>Rules and Regulations</li>
-                    </ul>
+                    </ul> */}
                 </div>
 
                 <div className={styles.col}>

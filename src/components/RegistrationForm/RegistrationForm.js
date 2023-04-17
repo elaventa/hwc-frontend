@@ -38,7 +38,7 @@ const RegistrationForm = () => {
                 (value) => (total += value?.length)
             );
         }
-        setamount(total * 2000)
+        setamount(total * 5500)
 
         
     }, [selectedCategories]);
@@ -79,7 +79,7 @@ const RegistrationForm = () => {
 
                 <Divider />
                 <Typography.Text>
-                    *Participants must pay ₹2000/- for each show.{" "}
+                    *Participants must pay ₹5500/- for each show.
                 </Typography.Text>
                 <Divider />
 
