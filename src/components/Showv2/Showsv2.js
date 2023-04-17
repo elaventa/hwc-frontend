@@ -1,12 +1,16 @@
 import Image from "next/image";
 import styles from "./Shows.module.scss";
 import img from "../../assets/hero.png";
+import { RiCalendar2Fill } from "react-icons/ri";
 import Button from "../Button/Button";
 import Link from "next/link";
-const Shows = () => {
+
+const Showsv2 = () => {
     return (
-        <div className={styles.showsContainer}>
-            <section className={styles.shows}>
+        <section className={styles.showsContainer}>
+            <h1 className={styles.title}>COMPETITIONS</h1>
+
+            <div className={styles.shows}>
                 <div className={styles.show}>
                     <Image
                         placeholder="blur"
@@ -15,19 +19,22 @@ const Shows = () => {
                         src={img}
                         alt=""
                     />
-                    <div className={styles.contentWrapper}>
-                        <h1 className={styles.title}>
-                         MR. Bangalore
-                        </h1>
-                        <p className={styles.content}></p>
+
+                    <div className={styles.content}>
+                        <h2 className={styles.showTitle}>MR. Bangalore</h2>
+
+                        <p className={styles.date}>
+                            <RiCalendar2Fill /> <span>28,29,30 July 2023</span>{" "}
+                        </p>
+
                         <Link href="/registration">
                             <Button content="Register Now" />
                         </Link>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     );
 };
 
-export default Shows;
+export default Showsv2;

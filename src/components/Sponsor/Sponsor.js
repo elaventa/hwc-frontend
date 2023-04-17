@@ -1,33 +1,49 @@
 import Image from "next/image";
 import styles from "./Sponsor.module.scss";
-import sponsorImg from "../../assets/sponsor.png";
+import img from "../../assets/placeholder.png";
 
 const Sponsor = () => {
     return (
         <section className={styles.sponsorContainer}>
-
-                <h1 className={styles.title}>OUR SPONSORS</h1>
-                <div className={styles.sponsors}>
-                    <div className={styles.sponsor}>
-                        <p className={styles.sponsorName}>hardwork fitness</p> 
-                    </div>
-                    <div className={styles.sponsor}>
-                        <p className={styles.sponsorName}>azwa fitness</p> 
-                    </div>
-                    <div className={styles.sponsor}>
-                        <p className={styles.sponsorName}>hard work baby</p> 
-                    </div>
+            <h1 className={styles.title}>OUR SPONSORS</h1>
+            <div className={styles.sponsors}>
+                <div className={styles.sponsor}>
+                    <Image
+                        placeholder="blur"
+                        loading="lazy"
+                        className={styles.image}
+                        src={img}
+                        alt=""
+                    />
+                    <p className={styles.sponsorName}>
+                        Hard work classic sponsor powered by platinum
+                    </p>
                 </div>
-
-            {/* <div className={styles.right}>
-                <Image
-                    placeholder="blur"
-                    loading="lazy"
-                    className={styles.image}
-                    src={sponsorImg}
-                    alt="sponsor logo"
-                />
-            </div> */}
+                <div className={styles.sponsor}>
+                    <Image
+                        placeholder="blur"
+                        loading="lazy"
+                        className={styles.image}
+                        src={img}
+                        alt=""
+                    />
+                    <p className={styles.sponsorName}>
+                        Hard work classic sponsor powered by gold
+                    </p>
+                </div>
+                <div className={styles.sponsor}>
+                    <Image
+                        placeholder="blur"
+                        loading="lazy"
+                        className={styles.image}
+                        src={img}
+                        alt=""
+                    />
+                    <p className={styles.sponsorName}>
+                        Hard work classic sponsor powered by silver
+                    </p>
+                </div>
+            </div>
         </section>
     );
 };

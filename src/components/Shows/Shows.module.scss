@@ -2,22 +2,22 @@ $card-width: 400px;
 .showsContainer {
     background-color: #fff;
     width: 100%;
-    margin-top: $card-width;
+    margin-top: $card-width/4;
 
     .shows {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         gap: 30px;
         @media (max-width: 1350px) {
             flex-direction: column;
         }
         .show {
-            background-color: #fff;
+            // background-color: #fff;
             margin-top: -$card-width/2;
             width: $card-width;
-            padding-top: 20px;
+            // padding-top: 20px;
             border-radius: 50% 50% 0 0;
             @media (max-width: 1350px) {
                 margin-top: 0;
@@ -26,10 +26,10 @@ $card-width: 400px;
                 width: 100%;
             }
             .image {
-                height: 200px;
+                // height: 200px;
                 object-fit: contain;
-                border-radius: 50% 50% 0 0;
-                margin-bottom: 20px;
+                // border-radius: 50% 50% 0 0;
+                // margin-bottom: 20px;
             }
 
             .contentWrapper {
