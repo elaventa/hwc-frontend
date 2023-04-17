@@ -4,35 +4,39 @@ const MensCategory = () => {
     const bodyBuildingCategories = [
         {
             value: "1",
-            label: "Category 1",
+            label: "Category 1 (55Kg)",
         },
         {
             value: "2",
-            label: "Category 2",
+            label: "Category 2 (60Kg)",
         },
         {
             value: "3",
-            label: "Category 3",
+            label: "Category 3 (65Kg)",
         },
         {
             value: "4",
-            label: "Category 4",
+            label: "Category 4 (70Kg)",
         },
         {
             value: "5",
-            label: "Category 5",
+            label: "Category 5 (75Kg)",
         },
         {
             value: "6",
-            label: "Category 6",
+            label: "Category 6 (80Kg)",
         },
         {
             value: "7",
-            label: "Category 7",
+            label: "Category 7 (85Kg)",
         },
         {
             value: "8",
-            label: "Category 8",
+            label: "Category 8 (90Kg)",
+        },
+        {
+            value: "9",
+            label: "Category 9 (Above 90Kg)",
         },
     ];
 

@@ -7,6 +7,7 @@ import Category from "./Category";
 import FemaleCategory from "./FemaleCategory";
 import MensCategory from "./MensCategory";
 import { useRegister } from "@/reactQuery/registration";
+import Link from "next/link";
 
 
 const RegistrationForm = () => {
@@ -79,7 +80,7 @@ const RegistrationForm = () => {
 
                 <Divider />
                 <Typography.Text>
-                    *Participants must pay ₹5500/- for each show.
+                    *Participants must pay ₹5500/- for each show. This amount is non refundable
                 </Typography.Text>
                 <Divider />
 
@@ -102,7 +103,7 @@ const RegistrationForm = () => {
                 >
                     <Checkbox>
                         By clicking register you agree to our Terms &
-                        Conditions.
+                        Conditions. <Link href="/rules-and-regulations" target="_blank">(Read Rules and Regulations)</Link>
                     </Checkbox>
                 </Form.Item>
                 <Button type="primary" htmlType="submit">

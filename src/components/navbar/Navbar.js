@@ -63,6 +63,9 @@ function Navbar() {
                 <li onClick={handleClick} className={styles.navItem}>
                     <Link href="/media">Media</Link>
                 </li>
+                <li onClick={handleClick} className={styles.navItem}>
+                    <Link href="/contact">Contact</Link>
+                </li>
             </ul>
 
             <div className={styles.mobileNav}>
