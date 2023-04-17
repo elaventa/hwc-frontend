@@ -21,11 +21,7 @@ const Shows = () => {
                                 Hard work classic sponsor powered by platinum
                             </h1>
                             <p className={styles.content}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Amet laboriosam cum sapiente
-                                sit unde quisquam molestias esse ab reiciendis.
-                                Dolore doloremque inventore reiciendis debitis
-                                possimus eum id, neque iste natus.
+                             
                             </p>
                             <Link href="/registration">
                                 <Button content="Register Now" />
@@ -47,11 +43,7 @@ const Shows = () => {
                                 Hard work classic sponsor powered by gold
                             </h1>
                             <p className={styles.content}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Amet laboriosam cum sapiente
-                                sit unde quisquam molestias esse ab reiciendis.
-                                Dolore doloremque inventore reiciendis debitis
-                                possimus eum id, neque iste natus.
+                             
                             </p>
                             <Link href="/registration">
                                 <Button content="Register Now" />
@@ -73,11 +65,7 @@ const Shows = () => {
                                 Hard work classic sponsor powered by silver
                             </h1>
                             <p className={styles.content}>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Amet laboriosam cum sapiente
-                                sit unde quisquam molestias esse ab reiciendis.
-                                Dolore doloremque inventore reiciendis debitis
-                                possimus eum id, neque iste natus.
+                             
                             </p>
                             <Link href="/registration">
                                 <Button content="Register Now" />
