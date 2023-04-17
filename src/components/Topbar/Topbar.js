@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <div className={styles.topbar}>
         <ul className={styles.topbarItems}>
-            <Link href="/about"><li className={styles.topbarItem}>About Us</li> </Link>
+            <Link href="/about"><li className={styles.topbarItem}>About</li> </Link>
             <Link href="/contact"><li className={styles.topbarItem}>Contact</li></Link>
         </ul>
     </div>
