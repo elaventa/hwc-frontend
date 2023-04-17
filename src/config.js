@@ -1,3 +1,3 @@
 export const config = {
-    SERVER_URL: "http://localhost:5000/api",
+    SERVER_URL: "https://hwc-backend.onrender.com/api",
 };
