@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./Shows.module.scss";
 import img from "../../assets/placeholder.png";
 import Button from "../Button/Button";
+import Link from "next/link";
 const Shows = () => {
     return (
         <div className={styles.showsContainer}>
@@ -26,7 +27,9 @@ const Shows = () => {
                                 Dolore doloremque inventore reiciendis debitis
                                 possimus eum id, neque iste natus.
                             </p>
-                            <Button content="Register Now" />
+                            <Link href="/registration">
+                                <Button content="Register Now" />
+                            </Link>
                         </div>
                     </div>
 
@@ -50,7 +53,9 @@ const Shows = () => {
                                 Dolore doloremque inventore reiciendis debitis
                                 possimus eum id, neque iste natus.
                             </p>
-                            <Button content="Register Now" />
+                            <Link href="/registration">
+                                <Button content="Register Now" />
+                            </Link>
                         </div>
                     </div>
 
@@ -74,7 +79,9 @@ const Shows = () => {
                                 Dolore doloremque inventore reiciendis debitis
                                 possimus eum id, neque iste natus.
                             </p>
-                            <Button content="Register Now" />
+                            <Link href="/registration">
+                                <Button content="Register Now" />
+                            </Link>
                         </div>
                     </div>
 
