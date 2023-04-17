@@ -9,15 +9,15 @@ a {
 }
 html{
   overflow-x: hidden;
-  font-size: 18px;
+  font-size: 16px;
   @media(max-width: 1350px){
-    font-size: 16px;
+    font-size: 14px;
   }
   @media(max-width: 1000px){
-    font-size: 15px;
+    font-size: 13px;
   }
   @media(max-width: 800px){
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
