@@ -10,7 +10,7 @@
         z-index: -1;
         height: 100%;
         width: 100%;
-        filter: brightness(30%);
+        filter: brightness(50%);
 
         .image{
             width: 100%;
@@ -21,9 +21,11 @@
 
     .GetInTouchContainer{
         display: grid;
+        width: 80%;
         grid-template-columns: 1fr 1fr;
         gap: 100px;
-        @media(max-width: 1350px){
+        @media(max-width: 1000px){
+            width: 100%;
             grid-template-columns: 1fr;
         }
         .contentWrapper{
