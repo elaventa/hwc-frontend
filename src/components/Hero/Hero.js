@@ -9,8 +9,7 @@ import Link from "next/link";
 const Hero = () => {
     return (
         <div className={styles.outer}>
-            <Image className={styles.curve} src={curve} alt="" />
-            <Image className={styles.phoneCurve} src={phoneCurve} alt="" />
+         
             <section className={styles.heroContainer}>
                 <div className={styles.contentContainer}>
                     <div className={styles.contentWrapper}>
