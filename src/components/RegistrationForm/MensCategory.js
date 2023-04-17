@@ -56,7 +56,7 @@ const MensCategory = () => {
     ];
     return (
         <>
-            <Row justify="space-between">
+            <Row gutter={30} >
                 <Col style={{padding: "10px 0"}} xs={24} lg={12}>
                     <Row>
                         <Typography.Title level={5}>
@@ -81,7 +81,7 @@ const MensCategory = () => {
                     </Form.Item>
                 </Col>
                 <Col style={{padding: "10px 0"}}>
-                    <Row>
+                    
                         <Form.Item
                             initialValue={[]}
                             name={["categories", "master"]}
@@ -94,11 +94,11 @@ const MensCategory = () => {
                                 </Checkbox>
                             </Checkbox.Group>
                         </Form.Item>
-                    </Row>
+                    
                 </Col>
             </Row>
 
-            <Row  justify="space-between">
+            <Row gutter={30} >
                 <Col style={{padding: "10px 0"}} xs={24} lg={12}>
                     <Row>
                         <Typography.Title level={5}>
