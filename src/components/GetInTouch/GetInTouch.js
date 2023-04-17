@@ -19,11 +19,10 @@ const GetInTouch = () => {
 
                 <div className={styles.contentWrapper}>
                     <h2 className={styles.title}>GET IN TOUCH</h2>
-                    <p className={styles.content}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
 
                     <div className={styles.row}>
                         <h3 className={styles.subTitle}>Email</h3>
-                        <p className={styles.subContent}> <a href="mailto:hardworkclassic@gmail.com"> hardworkclassic@gmail.com</a></p>
+                        <p className={styles.subContent}> <a href="mailto:info@hardworkclassic.com"> info@hardworkclassic.com</a></p>
                     </div>
 
                     <div className={styles.row}>
