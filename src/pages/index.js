@@ -12,7 +12,7 @@ const HomePage = () => {
             <Shows />
             <Sponsor />
             <JoinUs />
-            <Team />
+            {/* <Team /> */}
             <GetInTouch />
         </>
     );
