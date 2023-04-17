@@ -1,22 +1,32 @@
 .sponsorContainer{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 100px;
-    align-items: center;
+
     background-color: #171E27;
     color: #fff;
-    @media(max-width: 1350px){
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 10px;
-    }
-    .left{
-        width: 80%;
-        @media(max-width: 1350px){
-            width: 100%;
+    
+    .sponsors{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        flex-wrap: wrap;
+
+        .sponsor{
+            background-color: rgb(255, 255, 255);
+            color: #000;
+            padding: 20px;
+            border-radius: 20px;
+
+            .sponsorName{
+                font-size: 1.3rem;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
         }
+    }
         .title{
-            font-size: 3rem;
+            font-size: 2rem;
+            text-align: center;
             font-size: 800;
             margin-bottom: 30px;
         }
@@ -24,7 +34,6 @@
             font-size: 1.4rem;
             margin-bottom: 30px;
         }
-    }
 
     .right{
         .image{
