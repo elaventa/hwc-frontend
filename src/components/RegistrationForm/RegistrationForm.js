@@ -43,7 +43,7 @@ const RegistrationForm = () => {
     }, [selectedCategories]);
 
 
-    if(data?.status === "ok"){
+    if(true || data?.status === "ok"){
         return <PayNow data={data} amount={amount} />
     }
     
