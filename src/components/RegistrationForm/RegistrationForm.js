@@ -14,9 +14,9 @@ import PayNow from "../PayNow/PayNow";
 const RegistrationForm = () => {
     const [form] = Form.useForm();
     const category = Form.useWatch("category", form);
-    console.log(category);
-
+    
     const { mutate: register, isLoading, data } = useRegister();
+    console.log(data);
 
     const onFinish = (values) => {
         console.log(values);
@@ -43,7 +43,7 @@ const RegistrationForm = () => {
     }, [selectedCategories]);
 
 
-    if(true || data?.status === "ok"){
+    if(data?.status === "ok"){
         return <PayNow data={data} amount={amount} />
     }
     
