@@ -9,13 +9,14 @@ import MensCategory from "./MensCategory";
 import { useRegister } from "@/reactQuery/registration";
 import Link from "next/link";
 import ShowAddressModal from "../Dashboard/ShowAddressModal";
+import PayNow from "../PayNow/PayNow";
 
 const RegistrationForm = () => {
     const [form] = Form.useForm();
     const category = Form.useWatch("category", form);
     console.log(category);
 
-    const { mutate: register, isLoading } = useRegister();
+    const { mutate: register, isLoading, data } = useRegister();
 
     const onFinish = (values) => {
         console.log(values);
@@ -42,6 +43,9 @@ const RegistrationForm = () => {
     }, [selectedCategories]);
 
 
+    if(true || data?.status === "ok"){
+        return <PayNow data={data} amount={amount} />
+    }
     
 
     if (isLoading) {
@@ -117,7 +121,7 @@ const RegistrationForm = () => {
                     </Checkbox>
                 </Form.Item>
                 <Button type="primary" htmlType="submit">
-                    Register
+                    Pay Now
                 </Button>
             </Form>
         </section>
