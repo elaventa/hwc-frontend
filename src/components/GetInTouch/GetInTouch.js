@@ -27,7 +27,7 @@ const GetInTouch = () => {
 
                     <div className={styles.row}>
                         <h3 className={styles.subTitle}>Phone</h3>
-                        <p className={styles.subContent}><a href="tel:+"> +91 9747 406 685</a></p>
+                        <p className={styles.subContent}><a href="tel:+918197120172"> +91 81971 20172</a></p>
                     </div>
 
                     <div className={styles.row}>

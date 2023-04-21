@@ -7,7 +7,13 @@ const Footer = () => {
     return (
         <footer className={styles.footer}>
             <section className={styles.footerContent}>
-                <Image loading="lazy" placeholder="blur" className={styles.logo} src={logo} alt="hwc logo" />
+                <Image
+                    loading="lazy"
+                    placeholder="blur"
+                    className={styles.logo}
+                    src={logo}
+                    alt="hwc logo"
+                />
                 <div className={styles.col}>
                     <h2 className={styles.footerTitle}>Competitions</h2>
                     <ul>
@@ -58,20 +64,19 @@ const Footer = () => {
 
                 <div className={styles.col}>
                     <p>
-                        HARD WORK CLASSIC PVT LTD34/265, <br />
-                        Anand Nagar,Vakola, <br />
-                        Santacruz East,Mumbai 400055 <br />
-                        Maharashtra , India
+                        2, KHB Colony Main Rd, <br /> 1st R Block, Hanumanthappa
+                        Layout, <br /> Thimaiah Garden, RT Nagar, <br /> Bengaluru, Karnataka
+                        560032
                     </p>
 
                     <br />
 
                     <p className={styles.bold}>
-                        <a href="tel:+">+91 85913 36124</a>
+                        <a href="tel:+918197120172">+91 81971 20172</a>
                     </p>
                     <p className={styles.bold}>
-                        {" "}
-                        <a href="mailto:">hardworkclassic@gmail.com</a>{" "}
+                  
+                        <a href="mailto:info@hardworkclassic.com">info@hardworkclassic.com</a>
                     </p>
 
                     <br />
