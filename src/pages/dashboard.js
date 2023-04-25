@@ -1,12 +1,19 @@
 import ShowAddressModal from "@/components/Dashboard/ShowAddressModal";
-import { useGetRegistrations } from "@/reactQuery/registration";
+import {
+    useApprovePayment,
+    useGetRegistrations,
+} from "@/reactQuery/registration";
 import { Button, Table, Tag } from "antd";
 import { useState } from "react";
+import { CheckCircleOutlined } from "@ant-design/icons";
 
 const DashboardPage = () => {
-    const { data: registrations, isLoading: isRegistrationsLoading } =
+    const { data: registrations, isFetching, isLoading: isRegistrationsLoading } =
         useGetRegistrations();
-    console.log(registrations?.data);
+    const {
+        mutate: approve,
+        isLoading: isApproving,
+    } = useApprovePayment();
     const [showAddressModal, setshowAddressModal] = useState(false);
     const [address, setaddress] = useState();
 
@@ -75,12 +82,22 @@ const DashboardPage = () => {
                 </Button>
             ),
         },
+
         {
-            title: "Action",
-            key: "action",
-            render: (_, record) => <Button>View</Button>,
+            title: "Payment",
+            key: "isPaymentDone",
+            dataIndex: "isPaymentDone",
+            render: (isPaymentDone, record) =>
+                isPaymentDone ? (
+                    <CheckCircleOutlined
+                        style={{ color: "green", fontSize: "30px" }}
+                    />
+                ) : (
+                    <Button onClick={() => approve(record._id)}>Approve</Button>
+                ),
         },
     ];
+
     return (
         <>
             {showAddressModal ? (
@@ -91,7 +108,7 @@ const DashboardPage = () => {
                 />
             ) : null}
             <Table
-                loading={isRegistrationsLoading}
+                loading={isRegistrationsLoading || isFetching || isApproving}
                 columns={columns}
                 dataSource={registrations?.data}
                 sticky
