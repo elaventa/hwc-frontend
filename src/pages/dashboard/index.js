@@ -3,9 +3,10 @@ import {
     useApprovePayment,
     useGetRegistrations,
 } from "@/reactQuery/registration";
-import { Button, Table, Tag } from "antd";
+import { Button, Menu, Table, Tag } from "antd";
 import { useState } from "react";
 import { CheckCircleOutlined } from "@ant-design/icons";
+import Link from "next/link";
 
 const DashboardPage = () => {
     const { data: registrations, isFetching, isLoading: isRegistrationsLoading } =
@@ -107,6 +108,7 @@ const DashboardPage = () => {
                     address={address}
                 />
             ) : null}
+            
             <Table
                 loading={isRegistrationsLoading || isFetching || isApproving}
                 columns={columns}

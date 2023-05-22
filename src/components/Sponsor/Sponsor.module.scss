@@ -23,7 +23,8 @@
             gap: 30px;
             .image{
                 width: 200px;
-                height: auto;
+                height: 200px;
+                object-fit: cover;
             }
 
             .sponsorName{

@@ -16,19 +16,27 @@
 
     .shows{
         display: flex;
-        flex-direction: column;
-
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
         .show{
+            border: 1px solid #00000030;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 100px;
             @media(max-width: 500px){
                 grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 30px;
             }
             .image{
                 height: 300px;
+                width: 300px;
             }
             .content{
+                align-self: center;
                 .showTitle{
                     font-size: 1.8rem;
                     margin-bottom: 30px;
