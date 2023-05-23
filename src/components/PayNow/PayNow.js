@@ -2,10 +2,24 @@ import { Divider, Typography } from "antd";
 import styles from "./Paynow.module.scss";
 import Button from "../Button/Button";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const PayNow = ({ data, amount }) => {
+const PayNow = ({ data }) => {
     const [paid, setpaid] = useState(false);
+    const [amount, setamount] = useState()
+
+    useEffect(() => {
+        let total = 0;
+        console.log("hi", data)
+        console.log(data?.newReg?.categories)
+        if (data?.newReg?.categories) {
+            Object.values(data?.newReg?.categories).forEach(
+                (value) => (total += value?.length)
+            );
+        }
+        setamount(total * 5500);
+    }, [data])
+    
 
     if (paid) {
         return (
