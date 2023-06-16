@@ -21,13 +21,13 @@ export const useRegister = () => {
         onSuccess: (data) => {
             console.log(data)
             if(data?.status === "ok"){
-                toast.success(data?.message);
+                toast.success(data?.msg);
             } else {
-                toast.warn(data?.message)
+                toast.warn(data?.msg)
             }
         },
         onError: (data) => {
-            toast.error(data?.message);
+            toast.error(data?.msg);
         },
     });
 };
@@ -52,13 +52,13 @@ export const useApprovePayment = () => {
             queryClient.invalidateQueries({queryKey: ["registrations"]})
             console.log(data, "return data")
             if(data?.status === "ok"){
-                toast.success(data?.message);
+                toast.success(data?.msg);
             } else {
-                toast.warn(data?.message)
+                toast.warn(data?.msg)
             }
         },
         onError: (data) => {
-            toast.error(data?.data?.message);
+            toast.error(data?.data?.msg);
         },
     });
 };

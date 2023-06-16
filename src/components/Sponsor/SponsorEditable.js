@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { UploadOutlined } from "@ant-design/icons";
 import { config } from "@/config";
 import { useGetSponsors, useUpdateSponsor } from "@/reactQuery/sponsor";
-import { Spinner } from "@nextui-org/react";
 
 const SponsorEditable = () => {
     const { data: sponsors, isLoading } = useGetSponsors();

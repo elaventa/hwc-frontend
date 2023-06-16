@@ -40,14 +40,14 @@ export const useCompetition = () => {
         onSuccess: (data) => {
             console.log(data)
             if(data?.status === "ok"){
-                toast.success(data?.message);
+                toast.success(data?.msg);
             } else {
-                toast.warn(data?.message)
+                toast.warn(data?.msg)
             }
             queryClient.invalidateQueries({queryKey: ["competitions"]})
         },
         onError: (data) => {
-            toast.error(data?.message);
+            toast.error(data?.msg);
         },
     });
 };

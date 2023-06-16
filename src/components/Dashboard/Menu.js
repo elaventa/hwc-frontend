@@ -50,6 +50,13 @@ const DashboardMenu = () => {
             >
                 Competition
             </Menu.Item>
+
+            <Menu.Item
+                onClick={() => router.push("/dashboard/details")}
+                key="/dashboard/details"
+            >
+                Details
+            </Menu.Item>
         </Menu>
     );
 };

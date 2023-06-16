@@ -2,7 +2,9 @@ import Image from "next/image";
 import Button from "../Button/Button";
 import styles from "./JoinUs.module.scss";
 import background from "../../assets/background1.png";
+import { useGetDetails } from "@/reactQuery/details";
 const JoinUs = () => {
+    const { data } = useGetDetails()
     return (
         <div className={styles.joinUs}>
 
@@ -26,8 +28,7 @@ const JoinUs = () => {
                 <div className={styles.right}>
                     <iframe
                         className={styles.frame}
-                        src="https://www.youtube.com/embed/IpvMgvwVo8U"
-                        title="YouTube video player"
+                        src={data?.data?.youtubeLink}
                     ></iframe>
                 </div>
             </section>

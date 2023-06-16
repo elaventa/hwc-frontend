@@ -1,15 +1,14 @@
-import { Divider, Typography } from "antd";
+import { Divider, Image, Typography } from "antd";
 import styles from "./Paynow.module.scss";
 import Button from "../Button/Button";
 import Link from "next/link";
-import img from "../../assets/qr.png";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useGetDetails } from "@/reactQuery/details";
 
 const PayNow = ({ data }) => {
     const [paid, setpaid] = useState(false);
     const [amount, setamount] = useState();
-
+    const {data: details} = useGetDetails()
     useEffect(() => {
         let total = 0;
         console.log("hi", data);
@@ -40,14 +39,15 @@ const PayNow = ({ data }) => {
             <Divider />
             <div className={styles.paymentDetails}>
                 <p>Amount: {amount}</p>
-                {/* <p>Please Gpay {amount}Rs to +918197120172</p> */}
-                <a href={`upi://pay?pa=8197120172@ybl&am=${amount}`}>
+                <p>Please Gpay {amount}Rs to {details?.data?.gpayNo}</p>
+                <p>OR</p>
+                <a href={`upi://pay?pa=${details?.data?.upiId}&am=${amount}`}>
                     <Button content={"Pay Now"} />
                 </a>
 
                 <p>OR</p>
                 <div className="image">
-                    <Image width={200} height={200} src={img} alt="qr code" />
+                    <Image width={200} height={200} src={details?.data?.qrCode} alt="qr code" />
                 </div>
                 {/* <p>After doing the payment please click the button below</p>
 

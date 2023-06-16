@@ -4,9 +4,9 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 
-const getSponsors = async () => {
+const getDetails = async () => {
     return axios
-        .get(`${config.SERVER_URL}/sponsor`)
+        .get(`${config.SERVER_URL}/details`)
         .then((res) => {
             return res.data;
         })
@@ -16,14 +16,14 @@ const getSponsors = async () => {
         });
 };
 
-export const useGetSponsors = () => {
-    return useQuery(["sponsor"], getSponsors);
+export const useGetDetails = () => {
+    return useQuery(["details"], getDetails);
 };
 
 
 const update = async ({ payload }) => {
     return axios
-        .put(`${config.SERVER_URL}/sponsor`, payload)
+        .put(`${config.SERVER_URL}/details`, payload)
         .then((res) => {
             console.log(res);
             return res.data;
@@ -34,7 +34,7 @@ const update = async ({ payload }) => {
         });
 };
 
-export const useUpdateSponsor = () => {
+export const useUpdateDetails = () => {
     const queryClient = useQueryClient()
     return useMutation(update, {
         onSuccess: (data) => {
@@ -44,7 +44,7 @@ export const useUpdateSponsor = () => {
             } else {
                 toast.warn(data?.msg)
             }
-            queryClient.invalidateQueries({queryKey: ["sponsor"]})
+            queryClient.invalidateQueries({queryKey: ["details"]})
         },
         onError: (data) => {
             toast.error(data?.msg);
